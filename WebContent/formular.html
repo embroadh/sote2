@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Formular</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<script type="text/javascript">
+		
+		function manipulieren(text){
+
+		//Wert aus Inputfeld auslesen
+		var inputfeld = document.getElementById("in");
+		var wert = inputfeld.value; 
+	
+		//Elemente einfügen ...
+
+		var knoten = document.createElement("h3"); 
+		var inhalt = document.createTextNode(wert); 
+		knoten.appendChild(inhalt); 
+	
+		var divi = document.getElementById("container"); 
+		divi.appendChild(knoten); 
+		
+		}
+	
+		</script>
+	
+	</head>
+	<body> 
+		<h1>HTML Seite mit Formular</h1> 
+		<p></p>
+		<button onclick="manipulieren('Neuer Text')">Bitte klicken</button> 
+		<input id="in" type="text">
+		<p></p>
+		<div id="container">Hier kommt gleich der Text hin:</div>
+		
+	</body>
+</html>
